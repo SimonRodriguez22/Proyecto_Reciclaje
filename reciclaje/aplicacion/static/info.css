@@ -1,0 +1,30 @@
+body{
+    font-family: Verdana;
+}
+
+h1{
+    color: aqua;
+    padding-right: 20rem;
+}
+
+
+.foto-card{
+    width: 17rem;
+    height: 17rem;
+    margin-left: 2.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    width: 18rem;
+    margin-left: 5rem;
+}
+
+.card-body{
+    width: 286px;
+    height: 208px;
+}
+

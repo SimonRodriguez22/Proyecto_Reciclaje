@@ -1,0 +1,25 @@
+body{
+    background-color: white;
+
+}
+
+.navbar-custom{
+    background-color: #2ecc71;
+}
+
+.navbar-custom .nav-link{
+    font-family: Verdana;
+    color: white;
+    margin-left: 1rem;
+}
+
+#navbarDropdownMenuLink{
+    margin-right: 5rem;
+}
+
+.custom-img{
+    width: 5rem;
+    height: 5rem;
+    border-color: black;
+}
+
