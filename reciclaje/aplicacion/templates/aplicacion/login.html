@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LOGIN</h1> <br>
+    <form action="{% url 'validar_login' %}" method="POST">
+        {% csrf_token %}
+        Rut: <input type="text" name="rut" id=""> <br>
+        Contraseña: <input type="password" name="contraseña" id=""> <br>
+        <input type="submit" name="opcion" value="Enviar">
+    </form>
+
+</body>
+</html>
