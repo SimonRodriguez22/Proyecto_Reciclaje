@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+   
+    <form action="{% url 'validar_registro' %}" method="POST">
+        {% csrf_token %}
+        Rut: <input type="text" name="rut" id="" required> <br>
+        Nombre: <input type="text" name="nombre" id="" required> <br>
+        Apellido: <input type="text" name="apellido" id="" required> <br>
+        Contraseña: <input type="password" name="contraseña" id="" required> <br>
+        Telefono: <input type="number" name="telefono" id="" required><br>
+        Dirección: <input type="text" name="direccion" id="" required><br>
+        Correo: <input type="email" name="correo" id="" required><br>
+        Rol: <select name="rol" id="rol" required><br>
+                <option value="usuario">Usuario</option>
+                <option value="admin">Admin</option>
+            </select>
+        <button type="submit">Registrarse</button>
+    {% if mensaje %}
+        <div class="alert alert-success">
+            {{ mensaje }}
+            <a href="{% url 'login' %}"> Desea iniciar sesión?</a>
+        </div>
+    {% endif %}
+
+    </form>
+</body>
+</html>

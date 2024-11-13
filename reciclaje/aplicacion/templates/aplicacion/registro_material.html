@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registrar Material</h1>
+    <form action="{% url 'validar_registro_material' %}" method="POST">
+        {% csrf_token %}
+        Rut usuario: <input type="text" name="rut" id="rut" required> <br>
+        Material: <select name="nombre" id="nombre" id="nombre" required> <br>
+            <option value="plastico">plastico</option> 
+            <option value="carton">carton</option>
+        </select> <br>
+        Peso en kg: <input type="number" name="peso" id="peso" required> <br>
+        <button type="submit">Registrar material reciclado</button>
+    </form>
+</body>
+</html>

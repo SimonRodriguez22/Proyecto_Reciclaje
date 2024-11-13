@@ -1,0 +1,6 @@
+{% extends 'aplicacion/base.html' %}
+{% block content %}
+    <h1>Canje Exitoso!</h1>
+    <p>Has canjeado tu beneficio {{beneficio.titulo}} exitosamente! hemos mandado tu cupón a tu mail</p>
+    <a href="{% url 'base' %}"> Volver</a>
+    {% endblock %}

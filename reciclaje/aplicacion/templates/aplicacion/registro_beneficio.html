@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registrar un beneficio</h1>
+    <form action="{% url 'validar_beneficio' %}" method="POST">
+        {% csrf_token %}
+        Titulo : <input type="text" name="titulo" id="titulo" required> <br>
+        Fecha de inicio : <input type="date" name="fecha_inicio" id="fecha_inicio" required> <br>
+        Fecha de vencimiento : <input type="date" name="fecha_fin" id="fecha_fin" required> <br>
+        Puntos necesarios : <input type="number" name="costo" id="costo" required> <br>
+        Empresa :  <input type="text" name="empresa" id="empresa" required> <br>
+        <input type="submit" value="Registrar">
+        <a href="{% url 'panel_control' %}"> Volver</a>
+        {% if mensaje %}
+        <div class="alert alert-success">
+            {{ mensaje }}
+        </div>
+    {% endif %}
+    </form>
+</body>
+</html>

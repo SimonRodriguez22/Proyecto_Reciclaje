@@ -11,8 +11,15 @@
         {% csrf_token %}
         Rut: <input type="text" name="rut" id=""> <br>
         Contraseña: <input type="password" name="contraseña" id=""> <br>
-        <input type="submit" name="opcion" value="Enviar">
+        <input type="submit" name="opcion" value="Iniciar sesión">
     </form>
+
+    <h2>REGISTRO</h2>
+    <form action="{% url 'registro' %}" method="POST">
+        {% csrf_token %}
+        Registrate aqui: <input type="submit" name="registro" value="Registrarse">
+    </form>
+    
 
 </body>
 </html>

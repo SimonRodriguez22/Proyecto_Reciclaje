@@ -1,0 +1,16 @@
+{% extends 'aplicacion/base.html' %}
+{% block content %}
+    <h1>Confirmar Canje de Beneficio</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+        <a href="{% url 'beneficios' %}">Volver</a>
+    {% else %}
+        <p>¿Estás seguro que quieres canjear el beneficio <strong>{{ titulo }}</strong> con un costo de <strong>{{ costo }}</strong> puntos?</p>
+        <form method="POST" action="{% url 'confirmar_canje' beneficio_id %}">
+            {% csrf_token %}
+            Confirma tu rut por favor: <input type="text" name="rut" id="rut" required> <br>
+            <button type="submit">Sí, canjear</button>
+            <a href="{% url 'beneficios' %}">Cancelar</a>
+        </form>
+    {% endif %}
+    {% endblock %}

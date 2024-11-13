@@ -1,0 +1,24 @@
+{% extends 'aplicacion/base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Nuestros Beneficios</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        {% for i in beneficios %}
+        <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ i.titulo}}</h5>
+                        <p class="card-text">Valor del beneficio:  {{ i.costo}} puntos.</p>
+                        <a href="{% url 'canjear_beneficio' i.id %}" class="btn btn-secondary">Canjear</a>
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}
