@@ -1,6 +1,42 @@
 {% extends 'aplicacion/base.html' %}
 
+{% load static %}
+
+{% block archivos_css %}
+  <link rel="stylesheet" href="{% static 'info1.css' %}">
+{% endblock %}
 
 {% block content %}
 <h1>Aprende a reciclar</h1>
+
+<div class="caja-grande-info1">
+    <h2>¿Cómo reciclar de manera fácil?</h2><br>
+    <div class="caja-info1">
+    <h3>Reciclar es una forma importante de cuidar el planeta. Si separas correctamente los materiales, puedes ayudar a reducir la basura y a ahorrar recursos. Aquí te explico cómo hacerlo, paso a paso:</h3><br>
+    
+    <h4>Prepara los recipientes</h4>
+    <p>Necesitas al menos cuatro cubos o bolsas: uno para el papel, otro para el cartón, otro para el plástico y otro para los metales. Es importante que cada material tenga su propio lugar para que sea más fácil reciclar.</p><br>
+
+    <h4>Separa el papel</h4>
+    <p>El papel es fácil de reciclar, pero debe estar limpio y seco. Pon en el cubo del papel cosas como periódicos, revistas, cuadernos usados y sobres (sin ventanas de plástico). No pongas servilletas o papel sucio, porque no se pueden reciclar.</p><br>
+
+    <h4>Separa el cartón</h4>
+    <p>El cartón también se recicla, pero debe estar limpio. Puedes poner en el cubo de cartón cajas de pizza (sin restos de comida), cajas de cereales, y otros cartones. Si las cajas están mojadas o sucias, no las pongas.</p><br>
+
+    <h4>Separa los plásticos</h4>
+    <p>Los plásticos son muy comunes, pero debes asegurarte de poner solo los plásticos reciclables. Las botellas, envases de yogur, y bolsas de plástico (si tienes mucho) van en este cubo. No pongas plástico sucio o materiales como envoltorios de alimentos (si tienen restos de comida).</p><br>
+
+    <h4>Separa los metales</h4>
+    <p>Los metales como latas de refrescos, latas de comida, y tapas de botellas pueden ser reciclados. Asegúrate de que las latas estén vacías y limpias. No pongas metales sucios ni materiales como papel aluminio con restos de comida.</p><br>
+
+    <h4>Revisa y limpia los objetos</h4>
+    <p>Antes de poner algo en el cubo de reciclaje, asegúrate de que esté limpio. No es necesario que esté perfectamente limpio, pero debe estar libre de restos de comida o grasa, porque eso puede hacer que el material no se recicle correctamente.</p><br>
+
+    <h4>Lleva los materiales al contenedor</h4>
+    <p>Una vez que tengas los materiales separados y listos, lleva cada uno al contenedor adecuado en tu comunidad. Busca los puntos de reciclaje cerca de tu casa para depositar cada tipo de material en el contenedor correspondiente.</p><br>
+
+    <p>Recuerda: Al reciclar, ayudamos a reducir la contaminación y a hacer un uso más responsable de los recursos. ¡Es fácil y hace una gran diferencia!</p><br>
+    </div>
+</div>
 {% endblock %}
+
