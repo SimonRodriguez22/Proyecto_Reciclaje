@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+
+{% load static %}
+
+{% block archivos_css %}
+  <link rel="stylesheet" href="{% static 'info1.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="caja-grande-info1">
+    <h2>La importancia de reciclar</h2><br>
+    <div class="caja-info1">
+    
+    <p>El reciclaje es importante porque ayuda a cuidar el planeta y preservar los recursos naturales. Al reciclar, reducimos la cantidad de basura que termina en los vertederos, evitando la contaminación del suelo, el agua y el aire.</p><br>
+
+    <p>Además, al reutilizar materiales como plástico, papel, vidrio y metal, disminuimos la necesidad de extraer materias primas nuevas, lo que ahorra energía y reduce las emisiones de gases de efecto invernadero. En resumen, reciclar es una forma de proteger el medio ambiente, reducir el impacto del cambio climático y construir un futuro más sostenible para todos.</p><br>
+    </div>
+</div>
+
+
+{% endblock %}
