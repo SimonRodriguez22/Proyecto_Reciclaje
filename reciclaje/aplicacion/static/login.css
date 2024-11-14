@@ -1,0 +1,64 @@
+
+body {
+    background-color: #bcbab2;
+}
+
+#caja-login {
+    text-align: justify;
+    margin: 1rem;
+    width: 35rem;
+}
+
+form {
+    margin: 0.5rem;
+}
+
+input {
+    margin: 0.3rem;
+}
+
+.rellenar {
+    width: 15rem;
+}
+
+#input-rut {
+    margin-left: 5rem;
+}
+
+#input-pass {
+    margin-left: 1.5rem;
+}
+
+#boton-is {
+    margin: 2rem auto;
+    margin-left: 30%;
+    text-align: center;
+    width: 10rem;
+}
+
+h1 {
+    margin-left: 1.5rem;
+}
+
+.caja-registro {
+    text-align: justify;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 35rem;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+#btn-registro {
+    margin: 2rem;
+    width: 10rem;
+}
+
+#caja-login, .caja-registro {
+    border-radius: 2rem;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid black;
+    background-color: #dad7cd;
+}

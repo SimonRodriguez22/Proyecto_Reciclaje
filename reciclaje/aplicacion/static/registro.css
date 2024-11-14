@@ -1,0 +1,37 @@
+body {
+    background-color: #bcbab2;
+}
+
+form {
+    margin: 0.5rem;
+}
+
+input {
+    margin: 0.3rem;
+}
+
+h1 {
+    margin: 2rem 4rem;
+}
+
+.cajita-registro {
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    margin-left: 1rem auto;
+    width: 16rem;
+}
+
+p {
+    margin: 0;
+    width: 10rem;
+}
+
+button {
+    width: 10rem;
+}
