@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Train+One&family=Varela+Round&display=swap');
+
+
+/* Importes de fuentes */
+
 body{
-    background-color: white;
+    background-color: #dad7cd;
 
 }
 
 .navbar-custom{
-    background-color: #2ecc71;
+    background-color: #4d8740;
 }
 
 .navbar-custom .nav-link{
@@ -20,6 +27,92 @@ body{
 .custom-img{
     width: 5rem;
     height: 5rem;
-    border-color: black;
+    background-color: transparent;
 }
 
+.nav-item:hover {
+    font-size: 1.2em;
+}
+
+.caja-bienvenida {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: solid 1px green;
+    height: 20rem;
+    width: 80rem;
+    background-color: #31572c;
+    color: #dad7cd;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.7);;
+}
+
+#titulo1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 3rem;
+}
+
+.texto-comuna {
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+}
+
+.caja-comuna {
+    display: inline-block;
+    margin: 2rem 1rem 3rem 1rem;
+    height: 10rem;
+    width: 35rem;
+    padding: 0.5rem 5rem 1rem 5rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #006400;
+    border: 5px solid transparent;
+}
+#caja-comuna-actual {
+    background: linear-gradient(#006400, #006400) padding-box, 
+                linear-gradient(to right, #3498db, #2ecc71) border-box;
+                border-radius: 2rem;
+
+
+}
+#caja-comuna-meta {
+    background: linear-gradient(#006400, #006400) padding-box, 
+    linear-gradient(to left, #3498db, #2ecc71) border-box;
+    border-radius: 2rem;
+}
+
+.carousel-inner {
+    align-items: center;
+}
+
+.carousel-item{
+    margin: 0.6rem;
+}
+
+.d-block {
+    width: 950px;
+    height: auto;
+    margin: auto;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 8px 8px black inset;
+}
+
+.img-blured {
+    width: 980px;
+    height: auto;
+    filter: blur(20px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselExampleIndicators {
+    margin-bottom: 10rem;
+}
