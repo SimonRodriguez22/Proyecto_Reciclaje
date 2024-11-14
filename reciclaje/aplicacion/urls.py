@@ -19,8 +19,9 @@ urlpatterns=[
     path('validar_registro_material/', views.validar_registro_material, name='validar_registro_material'),
     path('registro_beneficio/', views.registro_beneficio, name='registro_beneficio'),
     path('validar_beneficio/', views.validar_beneficio, name='validar_beneficio'),
-     path('canjear_beneficio/<int:beneficio_id>/', views.canjear_beneficio, name='canjear_beneficio'),
-     path('confirmar_canje/<int:beneficio_id>/', views.confirmar_canje, name='confirmar_canje'),
-      path('canje_exitoso', views.validar_beneficio, name='validar_beneficio'),
-
+    path('canjear_beneficio/<int:beneficio_id>/', views.canjear_beneficio, name='canjear_beneficio'),
+    path('confirmar_canje/<int:beneficio_id>/', views.confirmar_canje, name='confirmar_canje'),
+    path('canje_exitoso', views.validar_beneficio, name='validar_beneficio'),
+    path('historial_reciclaje/', views.historial_reciclaje, name='historial_reciclaje'),
+    path('historial_admin/', views.historial_admin, name='historial_admin'),
 ]

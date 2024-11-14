@@ -1,5 +1,5 @@
+from django.db.models import Sum
 from django.shortcuts import render
-
 from .models import Usuario,Registro,Material,Beneficio
 from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect
@@ -7,27 +7,27 @@ from django.contrib.auth.hashers import check_password
 
 
 # Create your views here.
-
 def base(request):
     print("Hola, estoy en base")
     context={}
     return render(request,'aplicacion/base.html',context)
+
 
 def info(request):
     print("estoy en info")
     context={}
     return render(request,"aplicacion/info.html",context)
 
+
 def info1(request):
     print("estoy en info1")
     context={}
     return render(request,"aplicacion/info1.html",context)
 
+
 def login(request):
     context = {}
     return render(request, "aplicacion/login.html", context)
-
-
 
 
 def validar_login(request):
@@ -59,11 +59,11 @@ def validar_login(request):
     return render(request, 'aplicacion/login.html', context)
 
 
-
 def registro(request):
     print("Estoy en registro")
     context = {}
     return render(request, "aplicacion/registro.html", context)
+
 
 def validar_registro(request):
     print("Estoy en validar_registro")
@@ -94,6 +94,7 @@ def validar_registro(request):
     
     return render(request, "aplicacion/registro.html", context)
 
+
 def panel_control(request):
     print("esttoy en panel_control")
     context={}
@@ -106,10 +107,12 @@ def cerrar_sesion(request):
     
     return redirect('base')
 
+
 def registro_material(request):
     print("estoy en registro material")
     context={}
     return render(request,"aplicacion/registro_material.html",context)
+
 
 def validar_registro_material(request):
     if request.method == "POST":
@@ -148,6 +151,7 @@ def validar_registro_material(request):
     else:
         return render(request, 'aplicacion/registro_material.html')
 
+
 def beneficios(request):
    
     beneficios= Beneficio.objects.all()
@@ -156,10 +160,12 @@ def beneficios(request):
 
     return render(request, 'aplicacion/beneficios.html', context)
 
+
 def registro_beneficio(request):
     print("Estoy en registro beneficio")
     context={}
     return render(request, 'aplicacion/registro_beneficio.html', context)
+
 
 def validar_beneficio(request):
     print("Estoy en validar beneficio")
@@ -185,6 +191,7 @@ def validar_beneficio(request):
         context["mensaje"]="Error, beneficio no guardado"
         return render(request,"aplicacion/registro_beneficio.html",context)
     
+    
 def canjear_beneficio(request, beneficio_id):
     print("Estoy en canjear_beneficio")
     context = {}
@@ -201,8 +208,6 @@ def canjear_beneficio(request, beneficio_id):
 
     return render(request, "aplicacion/canjear_beneficio.html", context)
 
-from django.shortcuts import redirect, render
-from .models import Usuario, Beneficio
 
 def confirmar_canje(request, beneficio_id):
     if request.method == "POST":
@@ -231,10 +236,27 @@ def confirmar_canje(request, beneficio_id):
 
     return redirect('beneficios')
 
+
 def canje_exitoso(request):
     print("canje exitoso")
     context={}
     return render(request, "aplicacion/canje_exitoso.html",context)
 
 
+def historial_reciclaje(request):
+    registros = Registro.objects.filter(usuario=request.user)
+    
+    total_reciclado = registros.aggregate(total=Sum('peso'))['total'] or 0  
+
+    return render(request, 'aplicacion/historial_reciclaje.html', {
+        'registros': registros,
+        'total_reciclado': total_reciclado
+    })
+
+
+def historial_admin(request):
+    if request.session.get("user_role") != "admin":
+        return redirect('base')  
+    registros = Registro.objects.all()
+    return render(request, 'aplicacion/historial_admin.html', {'registros': registros})
 
