@@ -35,3 +35,17 @@ p {
 button {
     width: 10rem;
 }
+
+#btnVolver {
+    margin: 1rem auto;
+    width: 16rem;
+    border: 2px solid white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
