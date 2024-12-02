@@ -24,6 +24,7 @@ def info1(request):
     context={}
     return render(request,"aplicacion/info1.html",context)
 
+
 def info2(request):
     print("estoy en info1")
     context={}

@@ -1,51 +1,159 @@
-body {
-    background-color: #bcbab2;
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-form {
-    margin: 0.5rem;
+
+.cuerpo-login {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 900px;
+    background: url("imagenes/santiago5.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem; /* Añadir espacio en la parte inferior */
 }
 
-input {
-    margin: 0.3rem;
+.cuerpo-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+                                rgba(94, 252, 118, 0.5),
+                                rgba(27, 65, 126, 0.5));
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.caja-registro{
+    position: relative;
+    width: 28rem;
+    padding: 20px;
+    max-width: 90%;
+    width: 500px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(104, 145, 145, 0.6);
+    border: 1px solid rgba(42, 88, 115, 0.4);
+    box-shadow: 3px 0px 30px rgba(0, 115, 255, 0.4);
+    backdrop-filter: blur(5px) brightness(130%);
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 h1 {
-    margin: 2rem 4rem;
-}
-
-.cajita-registro {
-    margin: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-input {
-    margin-left: 1rem auto;
-    width: 16rem;
-}
-
-p {
-    margin: 0;
-    width: 10rem;
-}
-
-button {
-    width: 10rem;
-}
-
-#btnVolver {
-    margin: 1rem auto;
-    width: 16rem;
-    border: 2px solid white;
     text-align: center;
-    text-decoration: none;
-    border-radius: 1rem;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+    margin: 2rem 1rem;
 }
 
-a {
-    text-decoration: none;
+.input-div {
+    position: relative;
+}
+
+.form-input {
+    width: 90%;
+    background-color: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    transition: .3s ease all;
+}
+
+.form-input:focus {
+    border: 3px solid rgb(23, 119, 244);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+.form-input:hover {
+    border: 3px solid rgb(26, 134, 22);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+.label {
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.caja-btn-login {
+    text-align: center;
+    height: 40px;
+    line-height: 35px;
+    padding-bottom: 5rem;
+}
+
+.btn-login {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .1s ease all;
     font-size: 1.2rem;
+    width: 50%;
+    margin: 2.5rem auto 1rem auto;
+}
+
+.btn-login:hover {
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+    color:rgb(255, 220, 92);
+    font-weight: 700;
+    border: 1px solid rgb(184, 254, 183);
+}
+
+.btn-login:focus {
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+#link-registro {
+    margin-top: 1.5rem;
+}
+
+label a {
+    text-decoration: none;
+    color: white;
+}
+
+label a:hover {
+    color:rgb(255, 220, 92);
+}
+
+#label-rut {
+    margin-bottom: 3rem;
+}
+
+footer {
+    background-color: rgba(27, 65, 126, 0.5);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    width: 100%;
+    z-index: 2;
 }

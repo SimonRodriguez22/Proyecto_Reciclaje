@@ -1,64 +1,133 @@
-
-body {
-    background-color: #bcbab2;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
-#caja-login {
-    text-align: justify;
-    margin: 1rem;
-    width: 35rem;
+.cuerpo-login {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url("imagenes/santiago3.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
-form {
-    margin: 0.5rem;
+.cuerpo-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(94, 252, 118, 0.5), rgba(27, 65, 126, 0.5));
+    pointer-events: none;
+    z-index: 1;
 }
 
-input {
-    margin: 0.3rem;
-}
-
-.rellenar {
-    width: 15rem;
-}
-
-#input-rut {
-    margin-left: 5rem;
-}
-
-#input-pass {
-    margin-left: 1.5rem;
-}
-
-#boton-is {
-    margin: 2rem auto;
-    margin-left: 30%;
+.formulario {
+    position: absolute;
     text-align: center;
-    width: 10rem;
+    margin-top: -3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28rem;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(104, 145, 145, 0.6);
+    border: 1px solid rgba(42, 88, 115, 0.4);
+    box-shadow: 3px 0px 30px rgba(0, 115, 255, 0.4);
+    backdrop-filter: blur(5px) brightness(130%);
+    z-index: 2;
 }
 
 h1 {
-    margin-left: 1.5rem;
-}
-
-.caja-registro {
-    text-align: justify;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
     margin: 2rem 1rem;
-    padding: 1rem;
-    width: 35rem;
 }
 
-h2 {
-    margin: 1rem;
+.input-div {
+    position: relative;
 }
 
-#btn-registro {
-    margin: 2rem;
-    width: 10rem;
+.form-input {
+    width: 90%;
+    background-color: white;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    transition: .3s ease all;
 }
 
-#caja-login, .caja-registro {
+.form-input:focus {
+    border: 3px solid rgb(23, 119, 244);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+.form-input:hover {
+    border: 3px solid rgb(26, 134, 22);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+.label {
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.caja-btn-login {
+    text-align: center;
+    height: 40px;
+    line-height: 35px;
+    padding-bottom: 5rem;
+}
+
+.btn-login {
+    background-color: black;
+    color: white;
+    border: none;
     border-radius: 2rem;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-    border: 1px solid black;
-    background-color: #dad7cd;
+    cursor: pointer;
+    transition: .1s ease all;
+    font-size: 1.2rem;
+    width: 50%;
+    margin: 2.5rem auto 1rem auto;
+}
+
+.btn-login:hover {
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+    color:rgb(255, 220, 92);
+    font-weight: 700;
+    border: 1px solid rgb(184, 254, 183);
+}
+
+.btn-login:focus {
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+#link-registro {
+    margin-top: 1.5rem;
+}
+
+label a {
+    text-decoration: none;
+    color: white;
+}
+
+label a:hover {
+    color:rgb(255, 220, 92);
+}
+
+#label-rut {
+    margin-bottom: 3rem;
 }

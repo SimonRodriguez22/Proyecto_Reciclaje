@@ -18,6 +18,7 @@ body{
     font-family: Verdana;
     color: white;
     margin-left: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
 
 #navbarDropdownMenuLink{
@@ -31,7 +32,7 @@ body{
 }
 
 .nav-item:hover {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .caja-bienvenida {
@@ -116,3 +117,4 @@ body{
 #carouselExampleIndicators {
     margin-bottom: 10rem;
 }
+
