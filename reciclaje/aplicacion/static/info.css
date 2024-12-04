@@ -1,29 +1,94 @@
-body{
-    font-family: Verdana;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Train+One&family=Varela+Round&display=swap');
+
+.caja-body {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Montserrat Alternates', Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-h1{
-    color: aqua;
-    padding-right: 20rem;
+.contenedor-content {
+    background-color: #dad7cd;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    overflow-x: auto;
+    margin-bottom: 3rem;
+    transition: .3s ease all;
 }
 
 
-.foto-card{
-    width: 17rem;
-    height: 17rem;
-    margin-left: 2.5%;
+.caja-tarjeta {
+    background:linear-gradient(to right, rgb(162, 186, 193), rgb(233, 251, 253));
+    width: 620px;
+    min-height: 200px;
+    max-height: 900px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 18px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    transition: .3s ease all;
 }
 
-a{
+.caja-tarjeta:hover {
+    background:linear-gradient(to right, rgb(233, 251, 253), rgb(162, 186, 193));
+}
+
+.caja-img {
+    border-radius: 1rem;
+}
+
+.img-tarjeta {
+    width: 210px;
+    height: auto;
+    margin: 0;
+    border-radius: 1rem;
+}
+
+.caja-tarjeta-h {
+    display: flex;
+    flex: 1;
+    transition: .3s ease all;
+}
+
+.caja-padre-txt {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    transition: .3s ease all;
+}
+
+a {
     text-decoration: none;
 }
 
-.card{
-    width: 18rem;
-    margin-left: 5rem;
+.caja-hijo-txt {
+    background: transparent;
+    width: 350px;
+    height: 200px;
+    color: white;
+    transition: .3s ease all;
+    text-decoration: none;
+    color: rgb(9, 9, 29);
+    margin-top: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.card-body{
-    width: 286px;
-    height: 208px;
+.titulo-tarjeta {
+    margin-bottom: 2rem;
+}
+
+.txt-tarjeta {
+    text-align: justify;
+    margin: 10px;
 }

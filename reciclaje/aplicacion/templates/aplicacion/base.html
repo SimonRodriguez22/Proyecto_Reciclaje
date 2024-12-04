@@ -7,14 +7,14 @@
     {% load static %}
   
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
-    {% block archivos_css %}{% endblock archivos_css %}
+    {% block archivos_css %}{% endblock %}
     
 </head>
 <body class="cuerpo-base">
   <title>{% block title %}reciclaje{% endblock title %}</title>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
-        <img src="{% static 'imagenes/logo2.png' %}" class="img-thumbnail custom-img" alt="...">
+        <a href="{% url 'base' %}"><img src="{% static 'imagenes/logo2.png' %}" class="img-thumbnail custom-img" alt="..."></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,17 +38,20 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {% if request.session.user %}
                 <p>{{ request.session.user }}</p>
-                <p>{{request.session.user_puntos}} Puntos</p>
+                  {% if request.session.user_role == 'usuario' %}
+                    <p>{{request.session.user_puntos}} Puntos</p>
+                    {% endif %}
+                
                 {% else %}
-                <a class="nav-link dropdown-item" href="{% url 'login' %}">Iniciar Sesión</a>
+                <a class="nav-link dropdown-item" id="iniciar-sesion" href="{% url 'login' %}">Iniciar Sesión</a>
                   {% endif %}
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 {% if request.session.user_role == 'admin' %}
-                  <li><a class="dropdown-item" href="{% url 'panel_control' %}">Panel de control</a></li>
+                  <li><a class="dropdown-item" id="panel-link" href="{% url 'panel_control' %}">Panel de control</a></li>
                 {% endif %}
-                <li><a class="dropdown-item" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a></li>
+                <li><a class="dropdown-item" id="cerrar-sesion" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a></li>
               </ul>
             </li>
           </ul>
@@ -102,6 +105,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     {% endblock %}
+    <footer>Lucas Cartes, Romina Caucao, Simón Rodriguez - Inacap 2024</footer>
     
     
 </body>

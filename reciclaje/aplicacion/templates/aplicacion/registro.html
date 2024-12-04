@@ -3,7 +3,7 @@
     {% load static %}
 
     {% block archivos_css %}
-    <link rel="stylesheet" href="{% static 'registro.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'registro.css' %}?v=1.1">
     <title>{% block title %}Registrarse{% endblock title %}</title>
   
     {% endblock %}
@@ -17,48 +17,49 @@
                 {% csrf_token %}
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Rut:</p> <input class="form-input" type="text" name="rut" id="" required> <br>
+                    <label class="label">Rut: </label> <input class="form-input" type="text" name="rut" id="" required placeholder="11.111.111-1..."> <br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Nombre:</p> <input class="form-input" type="text" name="nombre" id="" required> <br>
+                        <label class="label">Nombre: </label> <input class="form-input" type="text" name="nombre" id="" required placeholder="ingresar Nombre..."> <br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Apellido:</p> <input class="form-input" type="text" name="apellido" id="" required> <br>
+                        <label class="label">Apellido:</label> <input class="form-input" type="text" name="apellido" id="" placeholder="ingresar apellido" required> <br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Contraseña:</p> <input class="form-input" type="password" name="contraseña" id="" required> <br>
+                        <label class="label">Contraseña:</label> <input class="form-input" type="password" name="contraseña" id="" placeholder="contraseña..." required> <br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Telefono:</p> <input class="form-input" type="number" name="telefono" id="" required><br>
+                        <label class="label">Teléfono:</label> <input class="form-input" type="number" name="telefono" id="" placeholder="+56912345678" required><br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Dirección:</p> <input class="form-input" type="text" name="direccion" id="" required><br>
+                        <label class="label">Dirección:</label> <input class="form-input" type="text" name="direccion" id="" placeholder="su dirección..." required><br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Correo:</p> <input class="form-input" type="email" name="correo" id="" required><br>
+                        <label class="label">Correo:</label> <input class="form-input" type="email" name="correo" id="" placeholder="correo electrónico..." required><br>
                     </div>
                 </div>
                 <div class="caja-formulario">
                     <div class="input-div">
-                    <p class="label">Rol:</p>
+                        <label class="label">Rol:</label>
+                        <select name="rol" id="rol" required><br>
+                            <option value="usuario">Usuario</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </div>
                 </div>
-                <select name="rol" id="rol" required><br>
-                <option value="usuario">Usuario</option>
-                <option value="admin">Admin</option>
-                </select> <br>
+                 <br>
                 <div class="caja-btn-login">
                     <button class="btn-login" type="submit">Registrarse</button>
                 </div>
@@ -70,7 +71,6 @@
             {% endif %}
             </form>
     </div>
-    <footer>soy el footer</footer>
 </div>
 
 

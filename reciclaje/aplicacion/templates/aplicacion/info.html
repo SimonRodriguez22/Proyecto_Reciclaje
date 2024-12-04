@@ -3,35 +3,44 @@
 {% load static %}
 
 {% block archivos_css %}
-  <link rel="stylesheet" href="{% static 'info.css' %}">
+<link rel="stylesheet" href="{% static 'info.css' %}?v=1.2">
 {% endblock %}
 
 {% block content %}
-<br>
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    
-        <div class="col">
-          <a href="{% url 'info1' %}" >
-          <div class="card">
-              <img src="{% static 'imagenes/cardUno.jpg' %}" class="card-img-top foto-card" alt="...">
-              <div class="card-body">
-              <h5 class="card-title">Te enseñamos a reciclar</h5>
-              <p class="card-text">Aprende a reciclar en tu hogar, solo siguiendo unos pasos muy simples!</p>
-          </div>
-          </a>
+<div class="caja-body">
+<h1>Aprende más sobre reciclaje</h1>
+  <div class="contenedor-content">
+    <div class="caja-tarjeta">
+      <a href="{% url "info1" %}">
+      <div class="caja-tarjeta-h">
+        <div class="caja-img">
+          <img src="{% static "imagenes/cardUno.jpg" %}" alt="..." class="img-tarjeta"/>
+        </div>
+        <div class="caja-padre-txt">
+          <div class="caja-hijo-txt">
+            <h5 class="titulo-tarjeta">Te enseñamos a reciclar</h5>
+            <p class="txt-tarjeta">Aprende a reciclar en tu hogar, solo siguiendo unos pasos muy simples!</p>
           </div>
         </div>
-    
-    <div class="col">
-      <a href="{% url 'info2' %}" >
-      <div class="card">
-        <img src="{% static 'imagenes/cardTres.png' %}"class="card-img-top foto-card" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">¿ Porqué es importante reciclar ?</h5>
-          <p class="card-text">En este artículo aprenderás la importancia de empezar a reciclar en nuestros hogares para ayudar con la contaminación</p>
-        </div>
-        </a>
       </div>
+      </a>
     </div>
-    
+
+    <div class="caja-tarjeta">
+      <a href="{% url "info2" %}">
+        <div class="caja-tarjeta-h">
+          <div class="caja-img">
+            <img src="{% static "imagenes/cardTres.png" %}" alt="..." class="img-tarjeta"/>
+        </div>
+        <div class="caja-padre-txt">
+          <div class="caja-hijo-txt">
+            <h5 class="titulo-tarjeta">¿ Porqué es importante reciclar ?</h5>
+            <p class="txt-tarjeta">En este artículo aprenderás la importancia de empezar a reciclar en nuestros hogares para ayudar con la contaminación</p>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
 {% endblock %}

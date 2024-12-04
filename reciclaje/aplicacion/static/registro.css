@@ -1,9 +1,12 @@
+/* margin: top right bottom left; */
+
 body, html {
     margin: 0;
     padding: 0;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 
@@ -18,7 +21,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5rem; /* Añadir espacio en la parte inferior */
+    padding-bottom: 5rem;
 }
 
 .cuerpo-login::before {
@@ -41,7 +44,7 @@ body, html {
     width: 28rem;
     padding: 20px;
     max-width: 90%;
-    width: 500px;
+    width: 680px;
     border-radius: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgba(104, 145, 145, 0.6);
@@ -52,6 +55,7 @@ body, html {
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 h1 {
@@ -68,19 +72,24 @@ h1 {
 }
 
 .form-input {
-    width: 90%;
-    background-color: white;
+    width: 400px;
+    background-color: rgba(46, 87, 73, 0.5);
     border: 3px solid transparent;
     border-radius: 3px;
-    height: 30px;
+    height: 35px;
     line-height: 30px;
     transition: .3s ease all;
+    font-style: italic;
+    border-radius: 3rem;
+    text-align: justify;
 }
 
 .form-input:focus {
     border: 3px solid rgb(23, 119, 244);
     outline: none;
+    background-color: rgba(189, 225, 250, 0.5);
     box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+    font-style: normal;
 }
 
 .form-input:hover {
@@ -90,11 +99,42 @@ h1 {
 }
 
 .label {
+    margin: 1.5rem 1rem 0.5rem auto;
     font-weight: 700;
-    text-align: left;
+    text-align: right;
     margin-bottom: 1rem;
+    width: 100px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
+
+#rol {
+    width: 400px;
+    background-color: rgba(46, 87, 73, 0.5);
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 30px;
+    transition: .3s ease all;
+    font-style: italic;
+    border-radius: 3rem;
+    text-align: justify;
+}
+
+#rol:focus {
+    border: 3px solid rgb(23, 119, 244);
+    outline: none;
+    background-color: rgba(189, 225, 250, 0.5);
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+    font-style: normal;
+}
+
+#rol:hover {
+    border: 3px solid rgb(26, 134, 22);
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(107, 107, 107, 1);
+}
+
+
 
 .caja-btn-login {
     text-align: center;
@@ -156,4 +196,5 @@ footer {
     right: 50%;
     width: 100%;
     z-index: 2;
+    font-size: small;
 }

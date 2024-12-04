@@ -1,7 +1,91 @@
+.contenedor-content {
+    background-color: #dad7cd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
 
+h1 {
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #033610;
+}
 
-.card-body, .card {
-    border: 1px solid #4d8740;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+.caja-body {
+    background-color: #dad7cd;
+    width: 100%;
+    min-height: 500px;
+    max-height: 900px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.contenedor-padre-tarjeta {
+    width: 480px;
+    height: 90%;
+    flex: 1;
+    display: flex;
+}
+
+.contenedor-tarjetas {
+    width: 360px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.cuerpo-tarjeta {
+    background-color: rgb(22, 22, 22);
+    width: 350px;
+    height: 200px;
+    border-radius: 1.5rem;
+    color: white;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    transition: .3s ease all;
+}
+
+.cuerpo-tarjeta:hover {
+    background-color: rgb(41, 41, 39);
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.7);
+    border: 1px solid white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -2px -2px 4px rgba(255, 255, 255, 0.7);
+    color:rgb(251, 255, 40);
+}
+
+.titulo-tarjeta {
+    margin: 1rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.texto-tarjeta {
+    margin: 2rem 1rem 1rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.div-btn-tarjeta .btn-tarjeta {
+    border: solid 3px rgb(255, 255, 255);
+    background-color: rgb(36, 36, 36);
+    width: 130px;
+    height: 2rem;
+    text-align: center;
+    justify-content: center;
+    margin: 1.6rem 1rem 1.5rem 12rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+    transition: .3s ease all;
+}
+
+.div-btn-tarjeta .btn-tarjeta:hover {
+    background-color: #2B743D;
 }
